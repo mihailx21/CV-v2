@@ -1,0 +1,41 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header{
+    text-align: end;
+}
+
+/* Aside stylyng */
+/* aside{
+    
+} */
+.skills{
+    padding: 20px 40px;
+}
+
+/* Main info styling */
+.main-container{
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.main{
+    padding: 10px 40px;
+}
+
+#my-name{  
+ font-size: 50px;
+ padding-bottom: 20px;
+ font-weight: bold;
+ text-shadow: 2px 2px grey;
+}
+
+#short-about-me{
+    font-size: 20px;
+    font-style: italic;
+    
+}
