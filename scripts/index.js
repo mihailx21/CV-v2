@@ -4,8 +4,55 @@ let mainInfo_en =  {
     age: 26,
     aboutMe:'Looking for a Front-end developer job at the Trainee or Junior level for development and growth in this direction'
 };
+
+let projectsList = {
+    first:{
+        links:'https://khristich-mihail.netlify.app',
+        usedTechology:['HTML','CSS', 'JS(for adapting for mobile device)'],
+        about:'My first cv project'
+    },
+    second:{
+        links:'https://github.com/mihailx21/darts-js',
+        usedTechology:['HTML', 'JS'],
+        about:'Funny target clicker with scores and running target'
+    },
+    third:{
+        links:'https://github.com/mihailx21/test-task-incode',
+        usedTechology:['HTML', 'CSS', 'JS', 'React.JS'],
+        about:'One of the test tasks giving me by companys to test my React.JS skills'
+    },
+    fourth:{
+        links:'https://github.com/mihailx21/test-task-itop1000',
+        usedTechology:['HTML', 'CSS', 'TypeScript', 'Angular'],
+        about:'One of the test tasks giving me by companys to test my Angular skills' 
+    }
+}
+
+let workExperience_en ={
+    lastWork:{
+        companyName:'Dataentry',
+        position:'Dataentry',
+        workTime:['November 2019','September 2021'],
+        duties: ['Determining the document type',
+                'Determination of the main participants of the document and their data',
+                'Enter information from the document into the database',
+                'Daily determination of your effectiveness']
+    },
+    secondWork: {
+        companyName:'',
+        position:'',
+        workTime:'',
+        duties: []
+    },
+    firstWork:{
+        companyName:'',
+        position:'',
+        workTime:'',
+        duties: []
+    }
+}
 let skills = {
-    hardSkills: ['HTML', 'CSS', 'JavaScript (ES5/ES6)', 'CSS-in-JS', 'React.JS(Basic)', 'Git', 'Figma'],
+    hardSkills: ['HTML', 'CSS', 'JavaScript (ES5/ES6)','HTML-in-JS' ,'CSS-in-JS', 'React.JS(Basic)', 'Git', 'Figma'],
     softSkills_en: ['Creativity', 'Communication', 'Problem-solving', 'Adaptability', 'Teamwork'],
     softSkills_ukr:['Креативність', 'Комунікативність', 'Рішення проблем', 'Адаптивність', 'Командна робота']
 };
@@ -22,6 +69,33 @@ function skillsList(groupNamrOfSkills, skills){
         result += `<li> ${skill} </li>`;
     }
     return result;
+}
+
+function arraysLike(arr){
+    let result = '[';
+    for(let el of arr)
+        result += `${el} ` 
+    result.slice(-2)
+    console.log(result);
+    result += ']'
+    return result
+}
+
+function projectList(list){
+    let result = '<h2> My pet projects</h2>';
+    result += '<ul>' 
+    var {links, usedTechology, about} = list.first;
+    newLink = links.padEnd(50,'.')
+    result += `<li><a href = "${links}">${newLink}</a> ${arraysLike(usedTechology)} <br> ${about}</li>`
+    var {links, usedTechology, about} = list.second;
+    result += `<li><a href = "${links}">${links}</a> ${usedTechology} <br> ${about}</li>`
+    var {links, usedTechology, about} = list.third;
+    result += `<li><a href = "${links}">${links}</a> ${usedTechology} <br> ${about}</li>`
+    var {links, usedTechology, about} = list.fourth;
+    result += `<li><a href = "${links}">${links}</a> ${usedTechology} <br> ${about}</li>`
+        
+    result += '</ul>'
+    return result
 }
 
 
@@ -45,7 +119,9 @@ hardSkills.innerHTML = skillsList(hardSkillsText, skills.hardSkills);
 
 let softSkills = document.getElementById('my-soft-skills');
 softSkills.innerHTML = skillsList('Soft Skills', skills.softSkills_en);
- 
+
+let myProjects = document.getElementById('my-projects')
+myProjects.innerHTML = projectList(projectsList)
 
 languageToogle.onchange = ()=>{
     console.log('Language change to: ', languageToogle.value);

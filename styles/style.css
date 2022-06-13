@@ -9,9 +9,13 @@ header{
 }
 
 /* Aside stylyng */
-/* aside{
-    
-} */
+aside{
+    background-color: grey;
+    border-radius: 10px;
+}
+img{
+    border-radius: 10px;
+}
 .skills{
     padding: 20px 40px;
 }
@@ -21,10 +25,13 @@ header{
     padding: 0 40px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .main{
     padding: 10px 40px;
+    background-color: beige;
+    border-radius: 10px;
 }
 
 #my-name{  
