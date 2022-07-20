@@ -1,33 +1,50 @@
+// main info 2 languages
 let mainInfo_en =  {
     firstname: 'Myhailo',
     lastdName: 'Khrystych',
     age: 26,
     aboutMe:'Looking for a Front-end developer job at the Trainee or Junior level for development and growth in this direction'
 };
-
+let mainInfo_ukr = {
+    firstname: 'Михайло',
+    lastdName: 'Христич',
+    age: 26,
+    aboutMe: 'Шукаю роботу Front-end розробника на рівні Trainee або Junior для розвитку та зростання в цьому напрямку'
+};
+// skills 2 languages
+let skills = {
+    hardSkills: ['HTML', 'CSS', 'JavaScript (ES5/ES6)','HTML-in-JS' ,'CSS-in-JS', 'React.JS(Basic)/Redux', 'Git', 'Figma'],
+    softSkills_en: ['Creativity', 'Communication', 'Problem-solving', 'Adaptability', 'Teamwork'],
+    softSkills_ukr:['Креативність', 'Комунікативність', 'Рішення проблем', 'Адаптивність', 'Командна робота']
+};
+// projects list on EN
 let projectsList = {
     first:{
         link:'khristich-mihail.netlify.app',
         usedTechology:['HTML','CSS', 'JS(for adapting for mobile device)'],
-        about:'My first cv project'
+        about:'My first cv project',
+        about_ukr:'Перша версія мого резюме'
     },
     second:{
         link:'github.com/mihailx21/darts-js',
         usedTechology:['HTML', 'JS'],
-        about:'Funny target clicker with scores and running target'
+        about:'Funny target clicker with scores and running target',
+        about_ukr:'Прикольний клікер по мішені з підсумком балів та "бігаючою" ціллю'
     },
     third:{
         link:'github.com/mihailx21/test-task-incode',
         usedTechology:['HTML', 'CSS', 'JS', 'React.JS'],
-        about:'One of the test tasks giving me by companys to test my React.JS skills'
+        about:'One of the test tasks giving me by companys to test my React.JS skills',
+        about_ukr:'Одне з тестових завдань виданих мені для оцінки моїх здібностей у React.JS'
     },
     fourth:{
         link:'github.com/mihailx21/test-task-itop1000',
         usedTechology:['HTML', 'CSS', 'TypeScript', 'Angular'],
-        about:'One of the test tasks giving me by companys to test my Angular skills' 
+        about:'One of the test tasks giving me by companys to test my Angular skills',
+        about_ukr:'Одне з тестових завдань виданих мені для оцінки моїх здібностей у Angular'
     }
 }
-
+// work experience 2 languages
 let workExperience_en = {
     lastWork:{
         companyName:'Dataentry',
@@ -53,7 +70,7 @@ let workExperience_en = {
             'Delivery of warranty products from service centers to the office',
             'Issuance of products according to the accounting database',
             'Transfer of products to the manager for further shipment to the client',
-            'Registration on the basis of own brand warranty products',
+            'Registration in the database of warranty products of one\'s own brand',
             'Sending own brand warranty products to a certified service center in Kiev',
             'Issue of own brand warranty products on an accounting basis and transfer it to the manager for further shipment to the client'
         ]
@@ -61,7 +78,7 @@ let workExperience_en = {
     firstWork:{
         companyName:'NTU \"KhPI\"',
         position:'Computer operator',
-        workTime:['April 2018', 'Decembe 2018'],
+        workTime:['April 2018', 'December 2018'],
         duties: [
             'Searching information',
             'Data processing',
@@ -69,17 +86,60 @@ let workExperience_en = {
         ]
     }
 }
-let skills = {
-    hardSkills: ['HTML', 'CSS', 'JavaScript (ES5/ES6)','HTML-in-JS' ,'CSS-in-JS', 'React.JS(Basic)', 'Git', 'Figma'],
-    softSkills_en: ['Creativity', 'Communication', 'Problem-solving', 'Adaptability', 'Teamwork'],
-    softSkills_ukr:['Креативність', 'Комунікативність', 'Рішення проблем', 'Адаптивність', 'Командна робота']
-};
-let mainInfo_ukr = {
-    firstname: 'Михайло',
-    lastdName: 'Христич',
-    age: 26,
-    aboutMe: 'Шукаю роботу Front-end розробника на рівні Trainee або Junior для розвитку та зростання в цьому напрямку'
-};
+let workExperience_ukr = {
+    lastWork:{
+        companyName:'Dataentry',
+        position:'Оператор набору',
+        workTime:['Листопад 2019','Вересень 2021'],
+        duties: [
+            'Визначення типу документа',
+            'Визначення основних учасників документа та їх даних',
+            'Внести інформацію з документа в базу даних',
+            'Щоденне визначення вашої ефективності'
+        ]
+    },
+    secondWork: {
+        companyName:'ЮГ-Контракт',
+        position:'Сервіс менеджер',
+        workTime:['Листопад 2018', 'Липень 2019'],
+        duties: [
+            'Візуальний огляд продукції для визначення гарантійного або негарантійного випадку',
+            'Доставка гарантійної продукції в сертифікований сервісний центр',
+            'Спілкування з клієнтом про негарантійний випадок і можливість платного ремонту',
+            'Відстеження стану гарантійних товарів в сервісному центрі',
+            'Зв\'язок з сервісним центром щодо прострочення гарантійного терміну ремонту',
+            'Доставка гарантійної продукції з сервісних центрів в офіс',
+            'Видача продукції згідно з обліковою базою',
+            'Передача продукції менеджеру для подальшої відправки клієнту',
+            'Реєстрація в базу гарантійної продукції власної марки',
+            'Гарантійна відправка продукції власного бренду в сертифікований сервісний центр в Києві',
+            'Оформлення гарантійної продукції власної марки під бухгалтерський облік та передача її менеджеру для подальшої відправки клієнту'
+        ]
+    },
+    firstWork:{
+        companyName:'НТУ \"ХПІ\"',
+        position:'Оператор ПК',
+        workTime:['Квітень 2018', 'Грудень 2018'],
+        duties: [
+            'Пошук інформації',
+            'Обробка інформації',
+            'Опрацювання та оформлення наукових статей, патентів, монографій'
+        ]
+    }
+}
+// education 2 languages
+let education_en = {
+    place: 'NTU \"KhPI\"',
+    degree: 'Master\'s degree in artificial intelligence systems',
+    time: 'September 2013 - June 2018',
+    country: 'Ukraine'
+}
+let education_ukr = {
+    place: 'НТУ \"ХПІ\"',
+    degree: 'Ступінь магістра систем штучного інтелекту',
+    time: 'Вересень 2013 - Червень 2018',
+    country: 'Україна'
+}
 
 
 
@@ -103,17 +163,20 @@ function arraysLike(arr){
 }
 
 // to do dotts correction !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! some problems with width that symbol takes
-function projectList(list, name){
+function projectList(list, name, flag){
     let result = `<h2> ${name} </h2><ol>`
     for(let number in list){
         let project = list[number]
-        let dots = project.link.padEnd(50, '.');
-        dots = dots.replaceAll(project.link, '');
-        console.log(dots);
+        let technologys = project.usedTechology.join(", ")
+        let projectAbout = flag ?  project.about: project.about_ukr
         result += `<li>
-            <a href = ${'https://'+project.link}>${project.link}</a>
-            <span>${dots}</span><span>[${project.usedTechology}]
-            </span><br><i>${project.about}</i>
+            <div class="link-and-technology-style">
+                <a href = ${'https://' + project.link}>${project.link}</a>
+                <span>[${technologys}]</span>
+            </div>
+            <div class="text-about-projects">
+                <i>${projectAbout}</i>
+            </div>
         </li>`
     }
     result += '</ol>'
@@ -122,44 +185,79 @@ function projectList(list, name){
 }
 
 function workList_en(node){
+    for(let key in workExperience_en){
+        let obj = workExperience_en[key] 
 
+        // company names
+        let companyName = document.createElement('h3')
+        companyName.innerText = obj.companyName + ' ' + obj.position;
+        node.appendChild(companyName);
 
-    
+        // work time for each work
+        let workingTime = document.createElement('div');
+        workingTime.innerText = obj.workTime[0] + ' | ' + obj.workTime[1];
+        node.appendChild(workingTime);
+        workingTime.classList.add('data-styling')
 
-    // let companyName = document.createElement('h3')
-    // companyName.innerText = workExperience_en.lastWork.companyName + ' ' + workExperience_en.lastWork.position;
-    // node.appendChild(companyName);
-
-    // let workingTime = document.createElement('div');
-    // workingTime.innerText = workExperience_en.lastWork.workTime[0] + ' | ' + workExperience_en.lastWork.workTime[1];
-    // node.appendChild(workingTime);
-
-    // let dutyList = document.createElement('ul');
-    // node.appendChild(dutyList);
-
-    // for(let duty of workExperience_en.lastWork.duties){
-    //     let pos = document.createElement('li');
-    //     pos.innerText = duty;
-    //     dutyList.appendChild(pos)
-    // }
+        // duties list
+        let dutyList = document.createElement('ul');
+        node.appendChild(dutyList);
+        for(let duty of obj.duties){
+            let pos = document.createElement('li');
+            pos.innerText = duty;
+            dutyList.appendChild(pos)
+        }
+    }
 }
 
 function workList_ukr(node){
+    for(let key in workExperience_ukr){
+        let obj = workExperience_ukr[key] 
+
+        // company names
+        let companyName = document.createElement('h3')
+        companyName.innerText = obj.companyName + ' ' + obj.position;
+        node.appendChild(companyName);
+
+        // work time for each work
+        let workingTime = document.createElement('div');
+        workingTime.innerText = obj.workTime[0] + ' | ' + obj.workTime[1];
+        node.appendChild(workingTime);
+        workingTime.classList.add('data-styling')
+
+        // duties list
+        let dutyList = document.createElement('ul');
+        node.appendChild(dutyList);
+        for(let duty of obj.duties){
+            let pos = document.createElement('li');
+            pos.innerText = duty;
+            dutyList.appendChild(pos)
+        }
+    }
+}
+function deleteNodesChilds(node){
+    while (node.firstChild) {
+        node.removeChild(node.firstChild);
+      }
+}
+function education(node, data){
+    //     place: 'NTU \"KhPI\"',
+    // degree: 'Master\'s degree in artificial intelligence systems',
+    // time: 'September 2013 - June 2018',
+    // country: 'Ukraine'
+    let nameSection = data.country === "Ukraine" ? "Education":"Освіта";
+    node.innerHTML = `
+        <h2>${nameSection}</h2>
+        <h3>${data.place}</h3>
+        <div>${data.degree}</div>
+        <div class="time-place-education">
+            <div class="data-styling">${data.time}</div>
+            <div>${data.country}</div>
+        </div> `
 }
 
 
-//change photo item
-let photo = document.getElementById('my-photo')
-let timerId = setInterval(() => {
-    let src = photo.src
-    photo.src = src.includes('src/photos/photo1.webp')? 
-        src.replace('src/photos/photo1.webp','src/photos/photo2.webp') : src.replace('src/photos/photo2.webp','src/photos/photo1.webp');
-
-    console.log('Interval', );
-}, 10000);
-
-
-
+// drawings =)
 //language toogle
 let languageToogle = document.getElementById('language-toogle');
 let flagImage = document.getElementById('flag')
@@ -184,21 +282,26 @@ softSkills.innerHTML = skillsList('Soft Skills', skills.softSkills_en);
 
 //projects
 let myProjects = document.getElementById('my-projects');
-myProjects.innerHTML = projectList(projectsList, 'My Pet Projects');
+myProjects.innerHTML = projectList(projectsList, 'My Pet Projects', 1);
 
 //work experience
-let myWork = document.getElementById('my-work-exp');
 let categoryName = document.createElement('h2');
+let nodeCategoryName = document.getElementById('category-name-work');
 categoryName.innerText = 'Work Experience';
-myWork.appendChild(categoryName);
+nodeCategoryName.appendChild(categoryName);
 
+let myWork = document.getElementById('my-work-exp');
 workList_en(myWork)
 
+// my education
+let myEducation = document.getElementById('education')
+education(myEducation, education_en)
 
 
+// language changer 
 languageToogle.onchange = ()=>{
     
-    //endlish
+    //english
     if(languageToogle.value === 'en'){
         labelLang.innerText = 'Language: ';
         flagImage.src = 'src/flags/us.svg'
@@ -207,10 +310,11 @@ languageToogle.onchange = ()=>{
         hardSkillsText = 'Hard Skills';
         hardSkills.innerHTML = skillsList(hardSkillsText, skills.hardSkills);
         softSkills.innerHTML = skillsList('Soft Skills', skills.softSkills_en);
-        myProjects.innerHTML = projectList(projectsList, 'My Pet Projects');
+        myProjects.innerHTML = projectList(projectsList, 'My Pet Projects', 1);
         categoryName.innerText = 'Work Experience';
-
-        
+        deleteNodesChilds(myWork);
+        workList_en(myWork)
+        education(myEducation, education_en)
 
     }
     //ukraine
@@ -222,9 +326,11 @@ languageToogle.onchange = ()=>{
         hardSkillsText = '\"Жорсткі\" навички';
         hardSkills.innerHTML = skillsList(hardSkillsText, skills.hardSkills);
         softSkills.innerHTML = skillsList('М\'які навички', skills.softSkills_ukr);
-        myProjects.innerHTML = projectList(projectsList, 'Мої домашні проекти');
+        myProjects.innerHTML = projectList(projectsList, 'Мої домашні проекти', 0);
         categoryName.innerText = 'Робочий досвід';
-       
+        deleteNodesChilds(myWork);
+        workList_ukr(myWork);
+        education(myEducation, education_ukr)
     }
 };
 

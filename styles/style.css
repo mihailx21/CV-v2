@@ -2,6 +2,9 @@ html{
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: 'Oswald', sans-serif;
+}
 
 /* Header styling */
 header{
@@ -10,13 +13,35 @@ header{
 
 /* Aside stylyng */
 aside{
-    background-color: grey;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 5px 5px 10px grey;
 }
-#my-photo{
+/* image styling and changing on hover */
+.image {
     border-radius: 10px;
     box-shadow: 0px 5px 10px black;
+}
+.image.first{
+    opacity:1px;
+    display:block;
+    position:absolute;
+    z-index:100;
+    transition-duration:0.96s;
+    -webkit-transition-duration:0.96s;
+    -moz-transition-duration:0.96s;
+    -o-transition-duration:0.96s;
+    -ms-transition-duration:0.96s;
+}
+.image.first:hover{
+    opacity:0.00;
+}
+.image.second{
+    display:inline-block;
+    background-position:center center;
+    background-repeat:no-repeat;
+    margin:0;
+    padding:0;
 }
 .skills{
     padding: 20px 40px;
@@ -37,20 +62,41 @@ li{
 .main{
     padding: 10px 40px;
     margin-left: 10px;
-    background-color: beige;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 5px 5px 10px grey;
 }
 
 #my-name{  
- font-size: 50px;
- padding-bottom: 20px;
- font-weight: bold;
- text-shadow: 2px 2px grey;
+    font-size: 50px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px grey;
 }
 
 #short-about-me{
     font-size: 20px;
     font-style: italic;
     
+}
+.link-and-technology-style{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text-about-projects{
+    color: grey;
+}
+.data-styling{
+    color: 	grey;
+    font-size: 12px;
+    padding-right: 12px;
+}
+.time-place-education{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 20px;
 }
