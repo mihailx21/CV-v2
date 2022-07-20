@@ -79,6 +79,9 @@ li{
     font-style: italic;
     
 }
+a{
+    color: black;
+}
 .link-and-technology-style{
     display: flex;
     flex-direction: row;
