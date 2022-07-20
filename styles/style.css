@@ -1,6 +1,7 @@
 html{
     margin: 0;
     padding: 0;
+    background-color: #f3f2ef;
 }
 body{
     font-family: 'Oswald', sans-serif;
@@ -13,9 +14,18 @@ header{
 
 /* Aside stylyng */
 aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 5px 5px 10px grey;
+}
+h2{
+    background-color: #f3f2ef;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px grey;
 }
 /* image styling and changing on hover */
 .image {
@@ -45,7 +55,6 @@ aside{
 }
 .skills{
     padding: 20px 40px;
-    
 }
 
 /* Main info styling */
@@ -60,8 +69,8 @@ li{
 }
 
 .main{
-    padding: 10px 40px;
-    margin-left: 10px;
+    padding: 20px 40px;
+    margin-left: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 5px 5px 10px grey;
@@ -103,3 +112,63 @@ a{
     font-size: 12px;
     margin-bottom: 20px;
 }
+
+
+/* icons */
+.social-media-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f3f2ef;
+    box-shadow: 5px 5px 10px grey;
+  }
+  .social-media-list a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 28px;
+    text-decoration: none;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .social-media-list a:not(:last-child) {
+    margin-right: 2rem;
+  }
+  
+  .social-media-list a i {
+    transition: transform 0.3s;
+  }
+  .social-media-list a::before {
+    content: " ";
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    transform: rotate(45deg);
+    top: -15%;
+    left: 5%;
+    background-color: #000;
+    z-index: -1;
+    transition: transform 0.3s;
+  }
+  
+  .social-media-list a:hover {
+    color: #000;
+    box-shadow: 5px 5px 10px grey;
+  }
+  
+  .social-media-lista:hover i {
+    transform: scale(1.2);
+  }
+  
+  .social-media-list a:hover::before {
+    transform: rotate(45deg) translate(15%, -100%)
+  }
