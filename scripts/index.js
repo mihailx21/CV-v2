@@ -21,27 +21,27 @@ let skills = {
 let projectsList = {
     first:{
         link:'khristich-mihail.netlify.app',
-        usedTechology:['HTML','CSS', 'JS(for adapting for mobile device)'],
+        usedTechology:['HTML','CSS', 'JS'],
         about:'My first cv project',
         about_ukr:'Перша версія мого резюме'
     },
     second:{
+        link:'lucent-sable-94981b.netlify.app',
+        usedTechology:['HTML', 'CSS'],
+        about:'Responsive website for displaying blog with news',
+        about_ukr:'Адаптивний сайт для ведення блогу новин'
+    },
+    third:{
         link:'github.com/mihailx21/darts-js',
         usedTechology:['HTML', 'JS'],
         about:'Funny target clicker with scores and running target',
         about_ukr:'Прикольний клікер по мішені з підсумком балів та "бігаючою" ціллю'
     },
-    third:{
+    fourth:{
         link:'github.com/mihailx21/test-task-incode',
         usedTechology:['HTML', 'CSS', 'JS', 'React.JS'],
         about:'One of the test tasks giving me by companys to test my React.JS skills',
         about_ukr:'Одне з тестових завдань виданих мені для оцінки моїх здібностей у React.JS'
-    },
-    fourth:{
-        link:'github.com/mihailx21/test-task-itop1000',
-        usedTechology:['HTML', 'CSS', 'TypeScript', 'Angular'],
-        about:'One of the test tasks giving me by companys to test my Angular skills',
-        about_ukr:'Одне з тестових завдань виданих мені для оцінки моїх здібностей у Angular'
     }
 }
 // work experience 2 languages
@@ -162,7 +162,6 @@ function arraysLike(arr){
     return result
 }
 
-// to do dotts correction !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! some problems with width that symbol takes
 function projectList(list, name, flag){
     let result = `<h2> ${name} </h2><ol>`
     for(let number in list){
@@ -297,6 +296,30 @@ workList_en(myWork)
 let myEducation = document.getElementById('education')
 education(myEducation, education_en)
 
+// contact button on mobile version
+let contactsButtonOnMobile = document.createElement('button');
+document.getElementsByClassName('main')[0].appendChild(contactsButtonOnMobile)
+contactsButtonOnMobile.innerHTML = '<i class="fa-solid fa-address-card"></i>';
+contactsButtonOnMobile.classList.add('contacts-button')
+contactsButtonOnMobile.style.width = '50px'
+contactsButtonOnMobile.style.height = '50px'
+contactsButtonOnMobile.style.fontSize = '30px'
+contactsButtonOnMobile.style.position = 'fixed';
+contactsButtonOnMobile.style.padding = '5px'
+contactsButtonOnMobile.style.backgroundColor = '#fff'
+contactsButtonOnMobile.style.border = '1px solid grey'
+contactsButtonOnMobile.style.borderRadius = '6px'
+contactsButtonOnMobile.style.top = '70px';
+contactsButtonOnMobile.style.right = '20px';
+contactsButtonOnMobile.onclick = ()=>{
+    let asideInfo = document.getElementsByTagName('aside')[0]
+    asideInfo.style.left = '10px';
+    contactsButtonOnMobile.style.display = 'none';
+    asideInfo.onclick = ()=>{
+        asideInfo.style.left = '-400px';
+        contactsButtonOnMobile.style.display = 'block';
+    }
+}
 
 // language changer 
 languageToogle.onchange = ()=>{

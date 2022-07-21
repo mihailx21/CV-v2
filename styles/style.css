@@ -171,3 +171,36 @@ a{
   .social-media-list a:hover::before {
     transform: rotate(45deg) translate(15%, -100%)
   }
+
+  .contacts-button{
+    display: none;
+  }
+
+  @media only screen and (max-width: 950px){
+    /* pre-mobile version and tablet-version */
+    aside{
+        position: absolute;
+        left: -400px;
+    }
+    .main-container{
+        padding: 0;
+    }
+    .main{
+        margin-left: 0px;
+    }
+    .contacts-button{
+        display: block;
+    }
+  }
+  @media only screen and (min-width: 950px){
+    .contacts-button{
+        display: none;
+    }
+  }
+
+  @media only screen and (max-width: 700px){
+    /* mobile version */
+    .link-and-technology-style{
+        flex-direction: column;
+    }
+  }
