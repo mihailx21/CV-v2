@@ -298,7 +298,9 @@ education(myEducation, education_en)
 
 // contact button on mobile version
 let contactsButtonOnMobile = document.createElement('button');
-document.getElementsByClassName('main')[0].appendChild(contactsButtonOnMobile)
+let mainBody = document.getElementsByClassName('main')[0]
+
+mainBody.appendChild(contactsButtonOnMobile)
 contactsButtonOnMobile.innerHTML = '<i class="fa-solid fa-address-card"></i>';
 contactsButtonOnMobile.classList.add('contacts-button')
 contactsButtonOnMobile.style.width = '50px'
@@ -311,15 +313,29 @@ contactsButtonOnMobile.style.border = '1px solid grey'
 contactsButtonOnMobile.style.borderRadius = '6px'
 contactsButtonOnMobile.style.top = '70px';
 contactsButtonOnMobile.style.right = '20px';
-contactsButtonOnMobile.onclick = ()=>{
-    let asideInfo = document.getElementsByTagName('aside')[0]
+contactsButtonOnMobile.style.boxShadow = '2px 2px 5px black'
+
+
+contactsButtonOnMobile.onclick = (event)=>{
+    event.stopPropagation();
+    let asideInfo = document.getElementsByTagName('aside')[0];
+    asideInfo.style.zIndex = 1;
+    mainBody.classList.add('bluring');
     asideInfo.style.left = '10px';
     contactsButtonOnMobile.style.display = 'none';
+    
     asideInfo.onclick = ()=>{
         asideInfo.style.left = '-400px';
         contactsButtonOnMobile.style.display = 'block';
+        mainBody.classList.remove('bluring');
+    }
+    mainBody.onclick = ()=>{
+        asideInfo.style.left = '-400px';
+        contactsButtonOnMobile.style.display = 'block';
+        mainBody.classList.remove('bluring');
     }
 }
+
 
 // language changer 
 languageToogle.onchange = ()=>{
