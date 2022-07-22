@@ -93,9 +93,9 @@ let workExperience_ukr = {
         workTime:['Листопад 2019','Вересень 2021'],
         duties: [
             'Визначення типу документа',
-            'Визначення основних учасників документа та їх даних',
-            'Внести інформацію з документа в базу даних',
-            'Щоденне визначення вашої ефективності'
+            'Визначення основних положень документа та даних',
+            'Внесення інформації з документа в базу даних',
+            'Щоденний підрахунок своєї ефективності'
         ]
     },
     secondWork: {
@@ -105,14 +105,14 @@ let workExperience_ukr = {
         duties: [
             'Візуальний огляд продукції для визначення гарантійного або негарантійного випадку',
             'Доставка гарантійної продукції в сертифікований сервісний центр',
-            'Спілкування з клієнтом про негарантійний випадок і можливість платного ремонту',
+            'Спілкування з клієнтом про негарантійний випадок та можливість платного ремонту',
             'Відстеження стану гарантійних товарів в сервісному центрі',
-            'Зв\'язок з сервісним центром щодо прострочення гарантійного терміну ремонту',
+            'Зв\'язок з сервісним центром щодо прострочення гарантійного терміну ремонту та сроків ремонту',
             'Доставка гарантійної продукції з сервісних центрів в офіс',
             'Видача продукції згідно з обліковою базою',
             'Передача продукції менеджеру для подальшої відправки клієнту',
             'Реєстрація в базу гарантійної продукції власної марки',
-            'Гарантійна відправка продукції власного бренду в сертифікований сервісний центр в Києві',
+            'Відправка гарантійної продукції власного бренду в сертифікований сервісний центр в Києві',
             'Оформлення гарантійної продукції власної марки під бухгалтерський облік та передача її менеджеру для подальшої відправки клієнту'
         ]
     },
@@ -189,7 +189,7 @@ function workList_en(node){
 
         // company names
         let companyName = document.createElement('h3')
-        companyName.innerText = obj.companyName + ' ' + obj.position;
+        companyName.innerHTML = `${obj.companyName} <span class='work-position'>${obj.position}</span>`;
         node.appendChild(companyName);
 
         // work time for each work
@@ -215,7 +215,7 @@ function workList_ukr(node){
 
         // company names
         let companyName = document.createElement('h3')
-        companyName.innerText = obj.companyName + ' ' + obj.position;
+        companyName.innerHTML = `${obj.companyName} <span class='work-position'>${obj.position}</span>`;
         node.appendChild(companyName);
 
         // work time for each work
@@ -240,10 +240,6 @@ function deleteNodesChilds(node){
       }
 }
 function education(node, data){
-    //     place: 'NTU \"KhPI\"',
-    // degree: 'Master\'s degree in artificial intelligence systems',
-    // time: 'September 2013 - June 2018',
-    // country: 'Ukraine'
     let nameSection = data.country === "Ukraine" ? "Education":"Освіта";
     node.innerHTML = `
         <h2>${nameSection}</h2>
@@ -362,7 +358,7 @@ languageToogle.onchange = ()=>{
         flagImage.src = 'src/flags/ua.svg'
         myFullName.innerText = `${mainInfo_ukr.lastdName} ${mainInfo_ukr.firstname}`;
         aboutMe.innerText = `${mainInfo_ukr.aboutMe}`;
-        hardSkillsText = '\"Жорсткі\" навички';
+        hardSkillsText = 'Жорсткі навички';
         hardSkills.innerHTML = skillsList(hardSkillsText, skills.hardSkills);
         softSkills.innerHTML = skillsList('М\'які навички', skills.softSkills_ukr);
         myProjects.innerHTML = projectList(projectsList, 'Мої домашні проекти', 0);

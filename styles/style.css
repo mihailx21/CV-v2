@@ -109,6 +109,9 @@ a{
     font-size: 12px;
     padding-right: 12px;
 }
+.work-position{
+  color: grey;
+}
 .time-place-education{
     display: flex;
     flex-direction: row;
